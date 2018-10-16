@@ -11,10 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        if(!app()->environment('production')):
+        //if(!app()->environment('production')):
             $this->call(RolesTableSeeder::class);
             $this->call(UsersTableSeeder::class);
             $this->call(ServicesTableSeeder::class);
-        endif;
+        //endif;
     }
 }
