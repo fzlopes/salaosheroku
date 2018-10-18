@@ -27,8 +27,7 @@ class ProfileFormRequest extends FormRequest
         return [
             'name'       => 'required|min:3',
             'email'      => 'required|email|unique:users,email,'.Auth::user()->id,
-            'birth_date' => 'required|date'
-        ];
+       ];
     }
 
     /**
@@ -42,8 +41,6 @@ class ProfileFormRequest extends FormRequest
             'name.min' => 'o nome é obrigatório e precisa ter no mínimo 3 caracteres.',
             'email.unique' => 'já existe um usuário com esse e-mail.',
             'email.email' => 'endereço de e-mail inválido.',
-            'birth_date.date' => 'data de nascimento inválida.',
-            'birth_date.required' => 'a data de nascimento deve ser informada.',
         ];
     }
 }
