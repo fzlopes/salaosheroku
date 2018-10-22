@@ -38,7 +38,7 @@ class ServiceController extends Controller
      */
     public function store(ServiceFormRequest $request)
     {
-        ServiceController::create($request->all());
+        Service::create($request->all());
 
         return redirect()
             ->route('servicos.index')
